@@ -5,6 +5,7 @@ on:
 
 jobs:
   publish-to-pages:
+    environment: publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,9 +22,8 @@ jobs:
         run: |
             git config --global user.email "rts.pub@pulegium.eu"
             git config --global user.name "Rytis Sileika"
-            git clone https://rytis:$GITHUB_TOKEN@github.com/rytis/rytis.github.io.git/
+            git clone https://rytis:${GITHUB_TOKEN}@github.com/rytis/rytis.github.io.git/
             cd rytis.github.io
-            git remote -v
             git checkout main
             mv CNAME ${GITHUB_WORKSPACE}/
             rm -rf *
