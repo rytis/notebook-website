@@ -23,6 +23,7 @@ jobs:
             git config --global user.name "Rytis Sileika"
             git clone https://rytis:$GITHUB_TOKEN@github.com/rytis/rytis.github.io.git/
             cd rytis.github.io
+            git remote -v
             git checkout main
             mv CNAME ${GITHUB_WORKSPACE}/
             rm -rf *
@@ -31,5 +32,5 @@ jobs:
             cp -rf ${GITHUB_WORKSPACE}/public/* .
             git add .
             git commit -m "From commit ${GITHUB_SHA}"
-            git push origin main
+            git push
 
