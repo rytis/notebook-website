@@ -23,7 +23,7 @@ jobs:
             git config --global user.name "Rytis Sileika"
             git clone https://x-access-token:${GITHUB_TOKEN}@github.com/rytis/rytis.github.io.git
             cd rytis.github.io
-            git checkout master
+            git checkout main
             rm -rf *
             cp -rf ${GITHUB_WORKSPACE}/public/*
             git add .
