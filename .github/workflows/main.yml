@@ -10,4 +10,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Hugo
         run: |
-            mkdir .hugo
+            sudo apt update
+            sudo apt install hugo -f
+      - name: Generate website
+        run: |
+            hugo
+      - name: Publish
+        run: |
+            ls -l
