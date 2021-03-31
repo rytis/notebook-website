@@ -21,10 +21,12 @@ jobs:
         run: |
             git config --global user.email "rts.pub@pulegium.eu"
             git config --global user.name "Rytis Sileika"
-            git clone https://x-access-token:${GITHUB_TOKEN}@github.com/rytis/rytis.github.io.git
+            git clone https://rytis:$GITHUB_TOKEN@github.com/rytis/rytis.github.io.git
             cd rytis.github.io
             git checkout main
+            mv CNAME ${GITHUB_WORKSPACE}/
             rm -rf *
+            mv ${GITHUB_WORKSPACE}/CNAME .
             cp -rf ${GITHUB_WORKSPACE}/public/*
             git add .
             git commit -m "From commit ${GITHUB_SHA}"
