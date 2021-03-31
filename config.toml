@@ -1,0 +1,4 @@
+baseURL = "https://pages.pulegium.eu/"
+languageCode = "en-us"
+title = "Pages"
+theme = "pulegium"
