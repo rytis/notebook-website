@@ -1,0 +1,13 @@
+name: Publish to pages
+
+on:
+  push
+
+jobs:
+  publish-to-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Hugo
+        run: |
+            mkdir .hugo
