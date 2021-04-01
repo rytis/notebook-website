@@ -1,3 +1,3 @@
 <footer>
-  <p>&copy; {{ now.Year }} {{ .Site.Copyright }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+  <small>&copy; {{ now.Year }} {{ if .Site.Copyright }}{{ .Site.Copyright }}{{ else }}{{ .Site.Title }}{{ end }}</small>
 </footer>
