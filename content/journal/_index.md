@@ -1,3 +1,4 @@
 ---
 title: "Records"
+linkTitle: "Journal"
 ---
