@@ -30,3 +30,6 @@ time {
   color: #999;
 }
 
+.highlight > pre {
+  padding: 20px;
+}
